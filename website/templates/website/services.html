@@ -1,0 +1,53 @@
+{% load static %}
+{% load i18n %}
+
+  <!-- ============== Start services section ========== -->
+  <section class="container services py-5" id="services">
+    <div class="heading">
+      <h4 class="pretitle" data-aos="fade-up">
+        {% trans 'our services' %}
+      </h4>
+      <h1 class="title col-lg-10 col-12" data-aos="fade-up" data-aos-delay="100">
+        {% trans 'What We’re Offering?' %}
+      </h1>
+      <p class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="150">
+        {% trans 'Find detailed information about all web services we can accomplish for you.' %}
+      </p>
+    </div>
+    <div class="row gy-4 gx-4 ">
+      <!-- service number 1 -->
+      <div class="col-md-6 col-12 col-lg-4 mx-auto ">
+        <div class="box box-service box-hover" data-aos="fade-right" data-aos-delay="250">
+          <div class="box-icon my-2">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <h2 class="title-2 my-2 ">{% trans 'web developement' %}</h2>
+          <p>{% trans 'Simple website, Website Portfolio, Website for small business with services, Blogs, Online shops, and more complex solutions for your business.' %}</p>
+          <a href="{% url 'service_web_development' %}" class="my-2 learn-more">{% trans 'learn more' %} <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class=" col-md-6 col-lg-4 mx-auto" data-aos="fade-down" data-aos-delay="200">
+        <!-- service number 2 -->
+        <div class="box box-service box-hover">
+          <div class="box-icon my-2">
+            <i class="bi bi-megaphone-fill"></i>
+          </div>
+          <h2 class="title-2 my-2 ">{% trans 'digital marketing' %}</h2>
+          <p>{% trans 'Google ads, Social network ads, Influencer marketing, email marketing, video marketing and more complex marketing solutions.' %}</p>
+          <a href="{% url 'service_digital_marketing' %}" class="my-2 learn-more">{% trans 'learn more' %} <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mx-auto" data-aos="fade-left" data-aos-delay="250">
+        <!-- service number 3 -->
+        <div class="box box-service  box-hover">
+          <div class="box-icon my-2">
+            <i class="bi bi-search"></i>
+          </div>
+          <h2 class="title-2 my-2 ">{% trans 'SEO Services' %}</h2>
+          <p>{% trans 'Seo in Google, Bing, Yahoo and all search engines. We will bring your website to the first page of search engines.' %}</p>
+          <a href="{% url 'service_seo' %}" class="my-2 learn-more">{% trans 'learn more' %} <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      
+  </section>
+  <!-- ============== End services section ========== -->

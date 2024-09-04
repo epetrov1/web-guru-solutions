@@ -1,0 +1,64 @@
+{% load static %}
+{% load i18n %}
+
+<!-- ============== Start contact section ========== -->
+<section class="container contact py-5" id="contact">
+    <div class="heading " data-contact-url="{% url 'contact_us' %}">
+      <h4 class="pretitle" data-aos="fade-up">
+        {% trans 'contact' %}
+      </h4>
+      <h1 class="title col-12" data-aos="fade-up" data-aos-delay="100">
+        {% trans 'contact us for Any Questions' %}
+      </h1>
+      <p class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="150">
+        {% trans 'We will answer your question as soon as possible' %}
+      </p>
+    </div>
+    <div class="row  gx-4 ">
+      <div class="col-12 col-lg-6 gy-3">
+        <h2 class="title-2 " data-aos="fade-right" data-aos-delay="200">
+          {% trans 'contact info :' %}
+        </h2>
+        <div class="info d-flex my-4 " data-aos="fade-right" data-aos-delay="250">
+          <h5><i class="bi bi-envelope-fill mx-4"></i>{% trans 'example@example.com' %}</h5>
+        </div>
+        <div class="info d-flex my-4 " data-aos="fade-up" data-aos-delay="300">
+          <h5><i class="bi bi-phone-fill mx-4"></i>{% trans '+123 456 6789' %}</h5>
+        </div>
+        {% comment %} <div class="info d-flex my-4 " data-aos="fade-up" data-aos-delay="350">
+          <h5><i class="bi bi-geo-alt-fill mx-4"></i>A108 Adam Street, New York, NY 535022</h5>
+        </div> {% endcomment %}
+        <div class="info d-flex my-4 " data-aos="fade-up" data-aos-delay="400">
+          <h5><i class="bi bi-instagram mx-4"></i>{% trans 'web guru solitions' %}</h5>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <!--Form To have user messages-->
+        <form class="main-form" id="contact-us-form" action="{% url 'contact_us' %}" method="post">
+          {% csrf_token %}
+          <div class="col-12">
+            <div class="row g-3 mb-1">
+              <div class="col-lg-6 col-12" data-aos="fade-right" data-aos-delay="200">
+                <input placeholder="{% trans "names" %}" type="text" id="name" name="name" class="text-input">
+              </div>
+              <div class="col-lg-6 col-12" data-aos="fade-left" data-aos-delay="200">
+                <input placeholder="{% trans "subject" %}" type="text" id="subject" name="subject" class="text-input">
+              </div>
+            </div>
+          </div>
+          <div class="col-12" data-aos="fade-up" data-aos-delay="250">
+            <input placeholder="email" type="email" id="email" name="email" class="text-input my-2">
+          </div>
+          <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+            <textarea placeholder="{% trans "message" %}" class="text-input my-2" rows="7" cols="30" id="message"
+              name="message"></textarea>
+          </div>
+          <div class="col-12" data-aos="fade-up" data-aos-delay="350">
+            <button type="submit" class="btn">{% trans "send" %}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+  </section>
+  <!-- ============== end contact section ========== -->

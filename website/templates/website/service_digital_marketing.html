@@ -1,0 +1,98 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block headers %}
+
+{% endblock headers %}
+<title>{% trans 'Digital marketing' %}</title>
+
+{% block body %}
+<!-- ======= srart Breadcrumbs ======= -->
+<section class="breadcrumbs py-4" data-aos="fade-up" data-aos-delay="150">
+    <div class="container">
+      <ol>
+        <li><a href="index.html">{% trans 'Home' %}</a></li>
+        <li><a href="services.html">{% trans 'services' %}</a></li>
+        <li>{% trans 'Digital marketing' %}</li>
+      </ol>
+      <h2 class="title">{% trans 'Digital marketing' %}</h2>
+      <p class="col-lg-10 col-12">
+        {% trans 'Your goals- our mission' %}
+      </p>
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <div class="single-service">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-7 col-12" data-aos="fade-right" data-aos-delay="200">
+          <img src="{% static 'images/service/banner-img2.png' %}" alt="service-img">
+          <h2 class="title my-2">{% trans 'We will make your digital marketing' %}</h2>
+          <p>{% trans 'Digital marketing is essential for any online business that wants to reach the right audience. We use the best tools to set up digital marketing for each website and target potential customers.' %}</p>
+          <p class="my-2"></p>
+          <img src="{% static 'images/service/business-development-2885464-2409431.webp' %}" alt="service-img">
+          <h2 class="title my-2">{% trans 'Why choose us?'%}</h2>
+          <p>{% trans 'Web Guru Solutions is your reliable partner in online business. Do not hesitate to contact us. Your success is our goal.' %}</p>
+          <div class="project-steps row g-2 my-4">
+            <div class="col-lg-6 col-12 mx-auto ">
+              <div class="box box-service ">
+                <h3 class="title-2 my-2 "><span class="unique-text">1. </span>{% trans 'Latest Technologies' %}</h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 mx-auto ">
+              <div class="box box-service">
+                <h3 class="title-2 my-2 "><span class="unique-text">2. </span>{% trans "Audiance targeting" %}</h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 mx-auto">
+              <div class="box box-service">
+                <h3 class="title-2 my-2 "><span class="unique-text">3. </span>{% trans 'Powerful Strategies' %}</h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 mx-auto">
+              <div class="box box-service">
+                <h3 class="title-2 my-2 "><span class="unique-text">4. </span>{% trans 'Uniqe Solutions' %}</h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 service-side row g-2" data-aos="fade-left" data-aos-delay="200">
+          <h2 class="title-2">{% trans 'list of services' %}</h2>
+          <div class="col-md-6 col-12 mx-auto service-box ">
+            <div class="box box-service box-hover">
+              <i class="bi bi-code-slash"></i>
+              <h3 class="title-2 my-2 ">{% trans 'web developement' %}</h3>
+              <p>{% trans 'Simple website, Website Portfolio, Website for small business with services, Blogs, Online shops, and more complex solutions for your business.' %}</p>
+            </div>
+          </div>
+          <div class=" col-md-6 col-12 mx-auto service-box ">
+            <div class="box box-service box-hover ">
+              <i class="bi bi-megaphone-fill"></i>
+              <h3 class="title-2 my-2 ">{% trans 'digital marketing' %}</h3>
+              <p>{% trans 'Google ads, Social network ads, Influencer marketing, email marketing, video marketing and more complex marketing solutions.' %}</p>
+            </div>
+          </div>
+          <div class=" col-md-6 col-12 mx-auto service-box">
+            <div class="box box-service box-hover">
+              <i class="bi bi-bug-fill"></i>
+              <h3 class="title-2 my-2 ">{% trans 'SEO Services' %}</h3>
+              <p>{% trans 'Seo in Google, Bing, Yahoo and all search engines. We will bring your website to the first page of search engines.' %}</p>
+            </div>
+          </div>
+          
+          <h2 class="title-2 mt-4">{% trans 'follow us' %}</h2>
+          <div class="row social">
+            <div class="icon"><i class="bi bi-facebook"></i></div>
+            <div class="icon mx-2"><i class="bi bi-instagram"></i></div>
+            <div class="icon mx-2"><i class="bi bi-twitter-x "></i></div>
+            <div class="icon mx-2"><i class="bi bi-youtube"></i></div>
+          </div>
+        </div>
+      </div>
+      {% include 'website/faq.html' %}
+{% endblock body %}

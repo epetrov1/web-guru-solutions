@@ -1,0 +1,89 @@
+{% load static %}
+{% load i18n %}
+
+<!-- ============== Start FAQ section ========== -->
+<section class="container faq py-5">
+    <div class="heading">
+      <h4 class="pretitle" data-aos="fade-up">
+        {% trans 'FAQ' %}
+      </h4>
+      <h1 class="title col-12" data-aos="fade-up" data-aos-delay="100">
+        {% trans 'Frequently Asked Questions' %}
+      </h1>
+      <p class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="150">
+        {% trans "If you have more questions don't hesitate to contact us" %}
+      </p>
+    </div>
+    <div class="row justify-content-center align-items-center  gx-4 ">
+      <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="200">
+        <img src="{% static 'images/faq/customer.png' %}" alt="faq">
+      </div>
+      <div class="col-12 col-lg-6  ">
+        <div class="col-12 my-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="box">
+            <div class="d-flex w-100 justify-content-between">
+              <a data-bs-toggle="collapse" class="w-100" onclick="rotateIcon('icon1')" href="#answer1" role="button"
+                aria-expanded="false">
+                <h4 class="d-flex justify-content-between w-100 heading-3 m-0 p-0">
+                  {% trans 'How long does it take to complete a project?' %}
+                  <i class="bi bi-chevron-compact-down mx-4 rotate-icon" id="icon1"></i>
+                </h4>
+              </a>
+            </div>
+            <p id="answer1" class="collapse">
+              {% trans 'The project duration depends on its complexity and scope. We typically start with an assessment of the time and resources required and provide a clear timeline, which we follow diligently.' %}
+            </p>
+          </div>
+        </div>
+        <div class="col-12 my-4 " data-aos="fade-up" data-aos-delay="300">
+          <div class="box">
+            <div class="d-flex w-100 justify-content-between">
+              <a data-bs-toggle="collapse" class="w-100" onclick="rotateIcon('icon2')" href="#answer2" role="button"
+                aria-expanded="false">
+                <h4 class="d-flex justify-content-between w-100 heading-3 m-0 p-0">
+                  {% trans 'How do you ensure the quality of the projects you deliver?' %}
+                  <i class="bi bi-chevron-compact-down mx-4 rotate-icon" id="icon2"></i>
+                </h4>
+              </a>
+            </div>
+            <p id="answer2" class="collapse">
+              {% trans 'We apply strict quality control standards at every stage of development. Regular testing and reviews are conducted to ensure that the final product meets all client requirements and expectations.' %}
+            </p>
+          </div>
+        </div>
+        <div class="col-12 my-4 " data-aos="fade-up" data-aos-delay="350">
+          <div class="box">
+            <div class="d-flex w-100 justify-content-between">
+              <a data-bs-toggle="collapse" class="w-100" onclick="rotateIcon('icon3')" href="#answer3" role="button"
+                aria-expanded="false">
+                <h4 class="d-flex justify-content-between w-100 heading-3 m-0 p-0">
+                  {% trans 'How do you determine the cost of a project?' %}
+                  <i class="bi bi-chevron-compact-down mx-4 rotate-icon" id="icon3"></i>
+                </h4>
+              </a>
+            </div>
+            <p id="answer3" class="collapse">
+              {% trans 'Project pricing is based on the scope, complexity, and specific requirements. After an initial consultation and analysis, we provide a detailed estimate that outlines the costs involved, ensuring transparency and no hidden fees.' %}
+            </p>
+          </div>
+        </div>
+        <div class="col-12 my-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="box">
+            <div class="d-flex w-100 justify-content-between">
+              <a data-bs-toggle="collapse" class="w-100" onclick="rotateIcon('icon4')" href="#answer4" role="button"
+                aria-expanded="false">
+                <h4 class="d-flex justify-content-between w-100 heading-3 m-0 p-0">
+                  {% trans 'How do you ensure the security of our data and systems?' %}
+                  <i class="bi bi-chevron-compact-down mx-4 rotate-icon" id="icon4"></i>
+                </h4>
+              </a>
+            </div>
+            <p id="answer4" class="collapse">
+              {% trans 'We prioritize security by implementing robust encryption, regular security audits, and adherence to industry best practices. Our solutions are designed to protect your data and systems from potential threats, ensuring peace of mind.' %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============== End FAQ section ========== -->

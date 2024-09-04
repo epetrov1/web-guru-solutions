@@ -1,0 +1,28 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block headers %}
+<title>Web Guru Solutions</title>
+
+{% endblock headers %}
+
+{% block body %}
+<!-- ======= srart Breadcrumbs ======= -->
+<section class="breadcrumbs py-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="container">
+      <ol>
+        <li><a href="index.html">{% trans 'Home' %}</a></li>
+        <li>{% trans 'services' %}</li>
+      </ol>
+      <h2 class="title">{% trans 'our services' %}</h2>
+      <p class="col-lg-10 col-12">
+        {% trans 'Your goals- our mission' %}
+      </p>
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  {% include 'website/services.html' %}
+  {% include 'website/faq.html' %}
+
+{% endblock body %}

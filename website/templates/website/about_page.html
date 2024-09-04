@@ -1,0 +1,40 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block headers %}
+<title>Web Guru Solutions</title>
+
+{% endblock headers %}
+
+{% block body %}
+
+
+  <!-- start scroll to top button -->
+  <div id="progress">
+    <span id="progress-value"><i class="bi bi-arrow-up-short"></i></span>
+  </div>
+  <!-- end scroll to top button -->
+
+
+  
+
+  <!-- ======= srart Breadcrumbs ======= -->
+  <section class="breadcrumbs py-4" data-aos="fade-up" data-aos-delay="200">
+    <div class="container">
+      <ol>
+        <li><a href="index.html">{% trans 'Home' %}</a></li>
+        <li>{% trans 'about' %}</li>
+      </ol>
+      <h2 class="title">about us</h2>
+      <p class="col-lg-10 col-12">
+        {% trans 'Your goals- our mission' %}
+      </p>
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+
+
+  {% include 'website/about.html' %}
+  {% include 'website/faq.html' %}
+
+{% endblock body %}

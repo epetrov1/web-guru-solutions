@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Фактура №{{ invoice.invoice_number }}</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        p {
+            margin: 2px 0;
+            padding: 0;
+        }
+        h1 {
+            margin: 2px 0;
+            padding: 0;
+        }
+        .invoice-header {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .invoice-header h1 {
+            font-size: 24px;
+            color: #007cae;
+        }
+        .invoice-number {
+            text-align: right;
+            margin-right: 30px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .section-content {
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="invoice-header">
+        <h1>ФАКТУРА</h1>
+        <h2>Оригинал</h2>
+    </div>
+    <div class="invoice-number">
+        <p> Номер: {{ invoice.invoice_number}}</p>
+        <p>Дата: {{ invoice.created_at|date:"d.m.Y" }}</p>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <div class="section-content">
+                    {% if invoice.company_name %}
+                    <p>Получател: {{ invoice.company_name }}</p>
+                    {% else %}
+                    <p>Получател: {{ invoice.first_name }} {{ invoice.last_name }}</p>
+                    {% endif %}
+                    <p>ДДС №: </p>
+                    <p>Идент. № : {{ invoice.eik }}</p>
+                    {% if not invoice.city %}
+                    <p>Град: </p>
+                    {% else %}
+                    <p>Град: {{ invoice.city }}</p>
+                    {% endif %}
+                    {% if not invoice.address %}
+                    <p>Адрес:</p>
+                    {% else %}
+                    <p>Адрес: {{ invoice.address }}</p>
+                    {% endif %}
+                    {% if not invoice.company_name %}
+                    <p>МОЛ: </p>
+                    {% else %}
+                    <p>МОЛ: {{ invoice.first_name }} {{ invoice.last_name }}</p>
+                    {% endif %}
+                    <p>Телефон</p>
+                </div>
+            </td>
+            <td>
+                <div class="section-content">
+                    <p>Доставчик: Уеб гуру солюшънс ЕООД</p>
+                    <p>ДДС №: </p>
+                    <p>Идент. №:  207707553</p>
+                    <p>Град: Кубрат</p>
+                    <p>Адрес: Дунав 6</p>
+                    <p>МОЛ: Евгени Петров</p>
+                    <p>Телефон</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+    <div class="details">
+        <div class="section-title">Детайли за фактурата:</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Описание</th>
+                    <th>Мярка</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                    <th>Сума</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>{{ invoice.product_description }}</td>
+                    <td>бр.</td>
+                    <td>{{ invoice.quantity }}</td>
+                    <td>{{ invoice.single_price }}</td>
+                    <td>{{ invoice.total_price }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="details">
+        <p>Данъчна основа: {{ invoice.total_price }}</p>
+        <p>ДДС: 0.00</p>
+        <p>Сума за плащане: {{ invoice.total_price }}</p>
+        <div class="section-content">
+            <p>{{ invoice.total }}</p>
+        </div>
+    </div>
+
+    <table class="invoice-contragent" style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <td class="details-buyer" style="width: 50%; border: 1px solid black; padding: 10px;">
+                <div class="section-content">
+                    <p>Дата на данъчно събитие: {{ invoice.created_at|date:"d.m.Y" }}</p>
+                    <p>ДДС №</p>
+                    <p>Основание за ненач. на ДДС: </p>
+                    <p>Описание на сделката:  </p>
+                    <p>Място на сделката:</p>
+                </div>
+            </td>
+            <td class="details-seller" style="width: 50%; border: 1px solid black; padding: 10px;">
+                <div class="section-content">
+                    <p>Плащане: По сметка</p>
+                    <p>IBAN: BG19STSA93000030630408</p>
+                    <p>Банка: ДСК</p>
+                    <p>Банков код: STSABGSF</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="details">
+        <div class="section-title">Получил: {{ invoice.first_name}} {{ invoice.last_name }}</div>
+        <div class="section-content">
+            <p>{{ invoice.total }}</p>
+        </div>
+    </div>
+</body>
+</html>

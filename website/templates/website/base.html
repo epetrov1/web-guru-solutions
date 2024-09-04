@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        <!-- OWN CSS FILES-->
+        <link rel="stylesheet" href="{% static 'css/aos.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+        <!--  toasts file     -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+        <!-- bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- main css file -->
+        <link rel="stylesheet" href="css/style.css">
+        {% block headers %}
+        {% endblock headers %}
+    </head>
+    <body class="home-2">
+        {% include "website/nav.html" %}
+        {% block body %}{% endblock body %}
+        {% include "website/footer.html" %}
+        <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+
+        <!-- bootstrap min js -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+        <!--  toasts file     -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+        <!--  owl carousel    -->
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+        <!-- aos file    -->
+        <script src="{% static 'js/aos.js' %}"></script>
+
+        <!-- gsap file    -->
+        <script src="{% static 'js/gsap.min.js' %}"></script>
+
+        <!--  counter     -->
+        <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'js/jquery.waypoints.js' %}"></script>
+
+        <!-- particles js file  -->
+        <script src="{% static 'js/particles.min.js' %}"></script>
+
+        <!-- jquery isotope file -->
+        <script src="{% static 'js/isotope.min.js' %}"></script>
+
+        <!-- jquery fancybox file -->
+        <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+
+        <!--  main js file  -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

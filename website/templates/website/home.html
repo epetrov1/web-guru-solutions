@@ -1,0 +1,437 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block headers %}
+<title>Web Guru Solutions</title>
+{% endblock headers %}
+{% block body %}
+  <!-- start preLoader -->
+  <div id="preloader">
+    <svg id="mainSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+      <defs>
+        <radialGradient id="mainGrad" cx="400" cy="300" fx="400" fy="300" r="100" gradientUnits="userSpaceOnUse">
+          <stop offset=".68" stop-color="#21df51" />
+          <stop offset=".72" stop-color="#3add63" />
+          <stop offset=".77" stop-color="#4fdd73" />
+          <stop offset=".82" stop-color="#66db83" />
+          <stop offset=".88" stop-color="#7cd893" />
+          <stop offset=".93" stop-color="#95d8a6" />
+          <stop offset=".99" stop-color="#bde6c7" />
+          <stop offset="1" stop-color="#e3f1e7" />
+        </radialGradient>
+      </defs>
+      <circle id="fillDot" cx="400" cy="300" fill="#21df51" r="100" />
+      <circle id="gradDot" cx="400" cy="300" fill="url(#mainGrad)" r="100" />
+    </svg>
+  </div>
+  <!-- end preLoader -->
+
+  <!-- start scroll to top button -->
+  <div id="progress">
+    <span id="progress-value"><i class="bi bi-arrow-up-short"></i></span>
+  </div>
+  <!-- end scroll to top button -->
+
+
+  <!-- ======= start Header ======= -->
+  
+  <!-- ======= end Header ======= -->
+
+  <!-- ============== Start Hero section ========== -->
+  <section class="hero  d-flex align-items-center justify-content-center" id="hero">
+    <div id="particles-js"></div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12">
+          <div class="d-flex flex-column wow text-center align-items-center justify-content-center  fadeInUp"
+            data-wow-delay="1s">
+            <div class="hero-icons d-flex gap-lg-3 gap-2 my-lg-3 my-2" data-aos="fade-up" data-aos-delay="50">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+            <div class="col-12 ">
+              <h1 class="title col-12 text-center" data-aos="fade-up" data-aos-delay="100">Web Guru <span
+                  class="unique-text">solutions</span></h1>
+            </div>
+            <div class="col-lg-10 col-12" data-aos="fade-up" data-aos-delay="150">
+              <p>
+                {% trans 'Professional web development for small, medium, and large businesses with various services. We will deliver your ideas online. From scratch to a working website we will go true together to meet all your expectations.' %}
+              </p>
+            </div>
+            <div class="d-flex gap-4">
+              <a href="#" class="btn" data-aos="fade-up" data-aos-delay="200">join now</a>
+              <a href="#" class="btn-sec" data-aos="fade-up" data-aos-delay="250">learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============== End Hero section ========== -->
+
+  {% include 'website/services.html' %}
+  {% include 'website/about.html' %}
+
+  <!-- ============== Start numbers section ========== -->
+  <section class="counter-up my-5" data-aos="fade-up" data-aos-delay="100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3  col-12 mt-5 mt-lg-0" data-aos="fade-right" data-aos-delay="200">
+          <i class="ri-discuss-line icon"></i>
+          <h1 class="counter">+100</h1>
+          <h2 class="title-2">{% trans 'happy clients' %}</h2>
+        </div>
+        <div class="col-lg-3 col-12 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="250">
+          <i class="ri-discuss-line icon"></i>
+          <h1 class="counter">+10</h1>
+          <h2 class="title-2">{% trans 'hard worker' %}</h2>
+        </div>
+        <div class="col-lg-3 col-12 mt-5 mt-lg-0" data-aos="fade-down" data-aos-delay="250">
+          <i class="ri-discuss-line icon"></i>
+          <h1 class="counter">+80</h1>
+          <h2 class="title-2">{% trans 'complete project' %}</h2>
+        </div>
+        <div class="col-lg-3 col-12 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+          <i class="ri-discuss-line icon"></i>
+          <div class="counter">+6</div>
+          <div class="title-2">{% trans 'Years Of Exprience' %}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============== End numbers section ========== -->
+
+  <!-- ============== Start Why us section ========== -->
+  <section class="container why-choose-us py-5">
+    <div class="heading">
+      <h4 class="pretitle" data-aos="fade-up">
+        {% trans 'why choose us' %}
+      </h4>
+      <h1 class="title col-12" data-aos="fade-up" data-aos-delay="100">
+        {% trans 'why our clients choose us' %}
+      </h1>
+      <p class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="150">
+        {% trans 'We put concept to working idea working on small details.' %}
+      </p>
+    </div>
+    <div class="row  gy-4 gx-4 ">
+      <div class="col-md-6  col-lg-4 mx-auto" data-aos="fade-right" data-aos-delay="250">
+        <div class="box">
+          <h1 class="my-4">01.</h1>
+          <h2 class="title-2 my-2 ">{% trans 'Latest Technologies' %}</h2>
+          <p>{% trans 'We use the latest technologies for the products we make.' %}</p>
+        </div>
+      </div>
+      <div class="col-md-6  col-lg-4 mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="box">
+          <h1 class="my-4">02.</h1>
+          <h2 class="title-2 my-2 ">{% trans 'Uniqe Solutions' %}</h2>
+          <p>{% trans 'We work with you before starting writing code until your requirements are clear.' %}</p>
+        </div>
+      </div>
+      <div class="col-md-6  col-lg-4 mx-auto" data-aos="fade-left" data-aos-delay="250">
+        <div class="box">
+          <h1 class="my-4">03.</h1>
+          <h2 class="title-2 my-2 ">{% trans 'Time Management' %}</h2>
+          <p>{% trans 'Once we know your requirements we can make a schedule and work with deadlines.' %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============== End Why us section ========== -->
+
+  {% comment %} {% include 'website/portfolio.html' %} {% endcomment %}
+
+  <!-- ============== Start clients section ========== -->
+
+  <div class="clients py-lg-5 py-2" data-aos="fade-up" data-aos-delay="100">
+    <div class="container">
+      <div class="row">
+        <div class="owl-carousel client owl-theme">
+          <div class="item">
+            <img src="{% static 'images/clients-logos/python.jpg' %}" alt="client-logo">
+          </div>
+          <div class="item">
+            <img src="{% static 'images/clients-logos/javascript.jpg' %}" alt="client-logo">
+          </div>
+          <div class="item">
+            <img src="{% static 'images/clients-logos/django.jpg' %}" alt="client-logo">
+          </div>
+          <div class="item">
+            <img src="{% static 'images/clients-logos/react.jpg' %}" alt="client-logo">
+          </div>
+          <div class="item">
+            <img src="{% static 'images/clients-logos/typescript.jpg' %}" alt="client-logo">
+          </div>
+          <div class="item">
+            <img src="{% static 'images/clients-logos/bootstrap.jpg' %}" alt="client-logo">
+          </div>
+          <div class="item">
+            <img src="{% static 'images/clients-logos/html5.jpg' %}" alt="client-logo">
+          </div>
+          <div class="item">
+            <img src="{% static 'images/clients-logos/css3.jpg' %}" alt="client-logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============== End clients section ========== -->
+
+  
+
+  <!-- ============== Start testimonials section ========== -->
+  <section class="container testimonials py-5">
+    <div class="heading">
+      <h4 class="pretitle" data-aos="fade-up">
+        {% trans 'testimonials' %}
+      </h4>
+      <h1 class="title col-12" data-aos="fade-up" data-aos-delay="100">
+        {% trans 'Customers Testmonials' %}
+      </h1>
+      <p class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="150">
+        {% trans 'What people say for us' %}
+      </p>
+    </div>
+    <div class="row" data-aos="fade-up" data-aos-delay="200">
+      <div class="owl-carousel testimonial owl-theme">
+        <div class="item">
+          <div class="box">
+            <div class="d-flex justify-content-center align-items-center m-2">
+              <div class="col-2 ms-4 ">
+                <img class="rounded-circle" src="{% static 'images/testimonials/testimonials-1.jpg' %}" alt="testimonial-img">
+              </div>
+              <div class="col-10 d-flex flex-column mx-4">
+                <h1 class="title-2">
+                  {% trans 'first client' %}
+                </h1>
+                <div class=" justify-content-between">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+            </div>
+            <p>{% trans 'Greate job web guru solutios' %}</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="d-flex justify-content-center align-items-center m-2">
+              <div class="col-2 ms-4">
+                <img class="rounded-circle" src="{% static 'images/testimonials/testimonials-2.jpg' %}" alt="testimonial-img">
+              </div>
+              <div class="col-10 d-flex flex-column mx-4">
+                <h1 class="title-2">
+                  {% trans 'Second client' %}
+                </h1>
+                <div class=" justify-content-between">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+            </div>
+            <p>{% trans 'Greate job web guru solutios -2' %}</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="d-flex justify-content-center align-items-center m-2">
+              <div class="col-2 ms-4">
+                <img class="rounded-circle" src="{% static 'images/testimonials/testimonials-5.jpg' %}" alt="testimonial-img">
+              </div>
+              <div class="col-10 d-flex flex-column mx-4">
+                <h1 class="title-2">
+                  {% trans 'Third client' %}
+                </h1>
+                <div class="justify-content-between">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+            </div>
+            <p>{% trans 'Greate job web guru solutios -2' %}</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="d-flex justify-content-center align-items-center m-2">
+              <div class="col-2 ms-4">
+                <img class="rounded-circle" src="{% static 'images/testimonials/testimonials-3.jpg' %}" alt="testimonial-img">
+              </div>
+              <div class="col-10 d-flex flex-column mx-4">
+                <h1 class="title-2">
+                  {% trans 'fift client' %}
+                </h1>
+                <div class="justify-content-between">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p>{% trans 'Greate job web guru solutios -3' %}</p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="box">
+            <div class="d-flex justify-content-center align-items-center m-2">
+              <div class="col-2 ms-4">
+                <img class="rounded-circle" src="{% static 'images/testimonials/testimonials-5.jpg' %}" alt="testimonial-img">
+              </div>
+              <div class="col-10 d-flex flex-column mx-4">
+                <h1 class="title-2">
+                  {% trans 'forth client' %}
+                </h1>
+                <div class="justify-content-between">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-center">{% trans 'Greate job web guru solutios -4' %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============== End testimonials section ========== -->
+
+  <!-- ============== start Product section ========== -->
+  <div class="container team">
+    <div class="heading">
+      <h4 class="pretitle" data-aos="fade-up">
+        {% trans 'Product' %}
+      </h4>
+      <h1 class="title col-12" data-aos="fade-up" data-aos-delay="100">
+        {% trans 'our product' %}
+      </h1>
+      <p class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="150">
+        {% trans 'We believe in smart people and invest in them. ' %}
+      </p>
+    </div>
+    <div class="row  gy-4 gx-4 ">
+      <a href="https://www.slflearner.com" target="_blank">
+      <div class=" col-lg-3 col-md-6 col-12 mx-auto" data-aos="fade-left" data-aos-delay="200">
+        <div class="box">
+          <div class="team-img">
+            <img src="{% static 'images/team/team-4.png' %}" alt="product-img">
+          </div>
+          <h3 class="my-2 title-2 ">{% trans 'Self Learner' %}</h3>
+        </div>
+      </div>
+    </a>
+    </div>
+  </div>
+  <!-- ============== end team section ========== -->
+
+  <!-- ============== Start Blog section ========== -->
+  {% comment %} <section class="container blog py-5" id="blog">
+    <div class="heading">
+      <h4 class="pretitle" data-aos="fade-up">
+        blog
+      </h4>
+      <h1 class="title col-12" data-aos="fade-up" data-aos-delay="100">
+        our blog
+      </h1>
+      <p class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="150">
+        As a matter of fact the unification of the coherent software provides a strict control over
+        The Accomplishment of Intended Estimation
+      </p>
+    </div>
+
+    <div class="row  gy-4 gx-4 ">
+      <div class="col-lg-4 col-md-6 col-12 mx-auto" data-aos="fade-right" data-aos-delay="250">
+        <div class="box card border-0">
+          <div class="col-12">
+            <img src="images/blog/post-images/1.jpg" alt="blog-img">
+          </div>
+          <div class="card-body">
+            <div class="info d-flex justify-content-between">
+              <h3><i class="bi bi-person-fill title-2 mx-2"></i>admin</h3>
+              <h3> <i class="bi bi-calendar-date-fill title-2 mx-2"></i>27/05/2023</h3>
+              <h3> <i class="bi bi-tag-fill title-2 mx-2"></i>web dev</h3>
+            </div>
+            <h1 class="title-2">
+              how to learn javascript easily with this method
+            </h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Explicabo earum id assumenda ad neque recusandae, quasi deleniti
+              voluptatum eos vel quas molestias?</p>
+            <a class="learn-more" href="blog-single.html">
+              read more <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col-lg-4 col-md-6 col-12 mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="box card border-0">
+          <div class="col-12">
+            <img src="images/blog/post-images/2.jpg" alt="blog-img">
+          </div>
+          <div class="card-body">
+            <div class="info d-flex justify-content-between">
+              <h3><i class="bi bi-person-fill title-2 mx-2"></i>admin</h3>
+              <h3> <i class="bi bi-calendar-date-fill title-2 mx-2"></i>27/03/2023</h3>
+              <h3> <i class="bi bi-tag-fill title-2 mx-2"></i>web dev</h3>
+            </div>
+            <h1 class="title-2">
+              why you should learn this new javascript framework
+            </h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Explicabo earum id assumenda ad neque recusandae, quasi deleniti
+              voluptatum eos vel quas molestias?</p>
+            <a class="learn-more" href="blog-single.html">
+              read more <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-4 col-md-6 col-12 mx-auto" data-aos="fade-left" data-aos-delay="250">
+        <div class="box card border-0">
+          <div class="col-12">
+            <img src="images/blog/post-images/3.jpg" alt="blog-img">
+          </div>
+          <div class="card-body">
+            <div class="info d-flex justify-content-between">
+              <h3><i class="bi bi-person-fill title-2 mx-2"></i>admin</h3>
+              <h3> <i class="bi bi-calendar-date-fill title-2 mx-2"></i>20/04/2023</h3>
+              <h3> <i class="bi bi-tag-fill title-2 mx-2"></i>marketing</h3>
+            </div>
+            <h1 class="title-2">
+              What is digital marketing and why is important ?
+            </h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Explicabo earum id assumenda ad neque recusandae, quasi deleniti
+              voluptatum eos vel quas molestias?</p>
+            <a class="learn-more" href="blog-single.html">
+              read more <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> {% endcomment %}
+  <!-- ============== End Blog section ========== -->
+
+  {% include 'website/faq.html' %}
+
+  {% include 'website/contact_us.html' %}
+{% endblock body %}
