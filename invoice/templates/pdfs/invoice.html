@@ -71,8 +71,16 @@
                     {% else %}
                     <p>Получател: {{ invoice.first_name }} {{ invoice.last_name }}</p>
                     {% endif %}
-                    <p>ДДС №: </p>
-                    <p>Идент. № : {{ invoice.eik }}</p>
+                    {% if invoice.vat_eik %}
+                    <p>ДДС №:{{ ivoice.vat_eik }}</p>
+                    {% else %}
+                    <p>ДДС №:</p>
+                    {% endif %}
+                    {% if invoice.eik %}
+                    <p>Идент. №: {{ invoice.eik }}</p>
+                    {% else %}
+                    <p>Идент. №:</p>
+                    {% endif %}
                     {% if not invoice.city %}
                     <p>Град: </p>
                     {% else %}
@@ -146,7 +154,7 @@
                 <div class="section-content">
                     <p>Дата на данъчно събитие: {{ invoice.created_at|date:"d.m.Y" }}</p>
                     <p>ДДС №</p>
-                    <p>Основание за ненач. на ДДС: </p>
+                    <p>Основание за ненач. на ДДС: чл.113 ал.9 от ЗДДС</p>
                     <p>Описание на сделката:  </p>
                     <p>Място на сделката:</p>
                 </div>
